@@ -1,0 +1,65 @@
+\documentclass[10pt]{letter}
+
+% just for fake text
+\usepackage[english]{babel}
+\usepackage{blindtext}
+
+% Use Times New Roman
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont[Mapping=tex-text]{Times New Roman}
+
+% No enormous \LaTeX margins
+\usepackage[empty,in]{fullpage}
+
+% full page background image for PDF -- delete this section if printing on stationery
+\usepackage[firstpage=true]{background}
+\backgroundsetup{scale=1,
+opacity=1,
+angle=0,
+contents={
+  \includegraphics[width=\paperwidth,height=\paperheight]{uafullpage}
+  }
+}
+
+% UA colors
+\usepackage{xcolor}
+\definecolor{AZBlue}{RGB}{12,35,75}
+\definecolor{AZRed}{RGB}{171,5,32}
+
+% create \textrt{} and \textbt{} commands for red and blue header text, respectively
+% Times New Roman is doubly specified in case you change the main typeface
+\newfontfamily\redtimes[Color=AZRed]{Times New Roman}
+\DeclareTextFontCommand{\textrt}{\small\redtimes}
+\newfontfamily\bluetimes[Color=AZBlue]{Times New Roman}
+\DeclareTextFontCommand{\textbt}{\footnotesize\bluetimes}
+
+\begin{document}
+\vspace*{0.27in}\textrt{\textbf{DEPARTMENT OF LINGUISTICS}}\\
+\vspace{-0.3\baselineskip}\textbt{Communication 109}\\
+\vspace{-0.3\baselineskip}\textbt{1103 E University Blvd}\\
+\vspace{-0.3\baselineskip}\textbt{PO Box 210025}\\
+\textbt{Tucson, AZ 85721-0025}\\
+\vspace{-0.3\baselineskip}\textbt{Ofc: 520-621-6897}\\
+\textbt{Fax: 520-626-9014}\\
+\textbt{http://linguistics.arizona.edu/}
+
+Month DD, 20YY
+
+Dr. The Doctor \\
+Department of Linguistics \\
+University of Hard Knocks \\
+1212 Boogie Woogie Ave \\
+Tutone, AZ 86753-0900 USA
+
+Dear Dr. Doctor:
+
+% body goes here
+\Blindtext[4][1]
+
+\bigskip
+Regards,
+
+Phil Student
+
+\end{document}
